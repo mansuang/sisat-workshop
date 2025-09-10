@@ -196,21 +196,23 @@ body {
 
 .hero-buttons {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .btn {
-    padding: 15px 30px;
+    padding: 12px 25px;
     border: none;
     border-radius: 50px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     text-decoration: none;
     display: inline-block;
     transition: all 0.3s ease;
     cursor: pointer;
     text-align: center;
+    white-space: nowrap;
 }
 
 .btn-primary {
@@ -464,6 +466,135 @@ section {
 .gallery-overlay i {
     font-size: 3rem;
     color: var(--white);
+}
+
+/* Students Section */
+.students {
+    background: var(--light-gray);
+}
+
+.students-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.student-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--shadow);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.student-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px var(--shadow-hover);
+}
+
+.student-card.placeholder {
+    border: 2px dashed var(--primary-yellow);
+    background: var(--secondary-yellow);
+}
+
+.student-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.student-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.student-card:hover .student-image img {
+    transform: scale(1.1);
+}
+
+.placeholder-icon {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--secondary-yellow);
+}
+
+.placeholder-icon i {
+    font-size: 4rem;
+    color: var(--primary-yellow);
+}
+
+.student-info {
+    padding: 25px;
+}
+
+.student-info h3 {
+    font-size: 1.5rem;
+    color: var(--black);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.student-role {
+    color: var(--accent-yellow);
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.student-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.student-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--primary-yellow);
+    color: var(--black);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--accent-yellow);
+    transform: translateY(-2px);
+}
+
+.student-achievement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, var(--secondary-yellow), var(--primary-yellow));
+    border-radius: 10px;
+    border-left: 4px solid var(--accent-yellow);
+}
+
+.student-achievement i {
+    color: var(--accent-yellow);
+    font-size: 1.2rem;
+}
+
+.student-achievement span {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 0.9rem;
 }
 
 /* College Section */
@@ -784,13 +915,18 @@ section {
         grid-template-columns: 1fr;
     }
     
+    .students-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .hero-buttons {
         justify-content: center;
+        gap: 10px;
     }
     
     .btn {
-        padding: 12px 25px;
-        font-size: 1rem;
+        padding: 10px 20px;
+        font-size: 0.9rem;
     }
 }
 
@@ -818,6 +954,44 @@ section {
     
     .image-placeholder p {
         font-size: 1.2rem;
+    }
+    
+    .students-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .student-info {
+        padding: 20px;
+    }
+    
+    .student-info h3 {
+        font-size: 1.3rem;
+    }
+    
+    .student-role {
+        font-size: 1rem;
+    }
+    
+    .student-achievement {
+        padding: 8px 12px;
+    }
+    
+    .student-achievement span {
+        font-size: 0.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
     }
 }
 

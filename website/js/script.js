@@ -64,7 +64,12 @@ function loadGalleryImages() {
         'LINE_ALBUM_ภาพการอบรม_250910_19.jpg',
         'LINE_ALBUM_ภาพการอบรม_250910_20.jpg',
         'LINE_ALBUM_ภาพการอบรม_250910_21.jpg',
-        'LINE_ALBUM_ภาพการอบรม_250910_22.jpg'
+        'LINE_ALBUM_ภาพการอบรม_250910_22.jpg',
+        'students/phonthida_kankam_2.jpg',
+        'students/pinthuon_promraksa_1.jpg',
+        'students/pinthuon_promraksa_2.jpg',
+        'students/pinthuon_promraksa_3.jpg',
+        'students/pinthuon_promraksa_4.jpg'
     ];
 
     imageFiles.forEach((filename, index) => {
